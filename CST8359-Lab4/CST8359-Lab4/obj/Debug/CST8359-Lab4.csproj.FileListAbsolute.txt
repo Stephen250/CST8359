@@ -1,0 +1,10 @@
+c:\users\hp\documents\visual studio 2013\Projects\CST8359-Lab4\CST8359-Lab4\obj\Debug\CST8359-Lab4.csprojResolveAssemblyReference.cache
+c:\users\hp\documents\visual studio 2013\Projects\CST8359-Lab4\CST8359-Lab4\bin\CST8359-Lab4.dll.config
+c:\users\hp\documents\visual studio 2013\Projects\CST8359-Lab4\CST8359-Lab4\bin\CST8359-Lab4.dll
+c:\users\hp\documents\visual studio 2013\Projects\CST8359-Lab4\CST8359-Lab4\bin\CST8359-Lab4.pdb
+c:\users\hp\documents\visual studio 2013\Projects\CST8359-Lab4\CST8359-Lab4\bin\EntityFramework.dll
+c:\users\hp\documents\visual studio 2013\Projects\CST8359-Lab4\CST8359-Lab4\bin\EntityFramework.SqlServer.dll
+c:\users\hp\documents\visual studio 2013\Projects\CST8359-Lab4\CST8359-Lab4\bin\EntityFramework.xml
+c:\users\hp\documents\visual studio 2013\Projects\CST8359-Lab4\CST8359-Lab4\bin\EntityFramework.SqlServer.xml
+c:\users\hp\documents\visual studio 2013\Projects\CST8359-Lab4\CST8359-Lab4\obj\Debug\CST8359-Lab4.dll
+c:\users\hp\documents\visual studio 2013\Projects\CST8359-Lab4\CST8359-Lab4\obj\Debug\CST8359-Lab4.pdb

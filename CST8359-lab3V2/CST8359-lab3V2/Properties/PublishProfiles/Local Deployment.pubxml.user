@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\hp\Desktop\CST8359\Lab 3</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>01/27/2016 13:27:13</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>01/27/2016 13:27:13</publishTime>
+    </File>
+    <File Include="bin/CST8359-lab3V2.dll">
+      <publishTime>02/15/2016 20:22:51</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>01/27/2016 13:27:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>01/27/2016 13:27:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>01/27/2016 13:27:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>01/27/2016 13:27:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>01/27/2016 13:27:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>01/27/2016 13:27:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>01/27/2016 13:27:04</publishTime>
+    </File>
+    <File Include="Calculator.aspx">
+      <publishTime>01/27/2016 13:28:40</publishTime>
+    </File>
+    <File Include="CreateAccount.aspx">
+      <publishTime>01/27/2016 13:28:40</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>01/27/2016 13:28:40</publishTime>
+    </File>
+    <File Include="MasterPage.Master">
+      <publishTime>01/27/2016 13:28:40</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/27/2016 13:27:08</publishTime>
+    </File>
+    <File Include="scripts/ai.0.21.5-build00175.js">
+      <publishTime>01/27/2016 13:27:08</publishTime>
+    </File>
+    <File Include="scripts/ai.0.21.5-build00175.min.js">
+      <publishTime>01/27/2016 13:27:08</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/15/2016 20:22:51</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetTweetsBetweenDates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTweetsBetweenDatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTweetsBetweenDatesResult" type="tns:ArrayOfTweet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTweet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Tweet" nillable="true" type="tns:Tweet" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Tweet">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PostId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Entry" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatePosted" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTweetsPaged">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="page" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="number" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTweetsPagedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTweetsPagedResult" type="tns:ArrayOfTweet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLast100Tweets">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLast100TweetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLast100TweetsResult" type="tns:ArrayOfTweet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostTweet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tweet" type="tns:Tweet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostTweetResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTweetsBetweenDatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTweetsBetweenDates" />
+  </wsdl:message>
+  <wsdl:message name="GetTweetsBetweenDatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTweetsBetweenDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTweetsPagedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTweetsPaged" />
+  </wsdl:message>
+  <wsdl:message name="GetTweetsPagedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTweetsPagedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLast100TweetsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLast100Tweets" />
+  </wsdl:message>
+  <wsdl:message name="GetLast100TweetsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLast100TweetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostTweetSoapIn">
+    <wsdl:part name="parameters" element="tns:PostTweet" />
+  </wsdl:message>
+  <wsdl:message name="PostTweetSoapOut">
+    <wsdl:part name="parameters" element="tns:PostTweetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TweetServiceSoap">
+    <wsdl:operation name="GetTweetsBetweenDates">
+      <wsdl:input message="tns:GetTweetsBetweenDatesSoapIn" />
+      <wsdl:output message="tns:GetTweetsBetweenDatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTweetsPaged">
+      <wsdl:input message="tns:GetTweetsPagedSoapIn" />
+      <wsdl:output message="tns:GetTweetsPagedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLast100Tweets">
+      <wsdl:input message="tns:GetLast100TweetsSoapIn" />
+      <wsdl:output message="tns:GetLast100TweetsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostTweet">
+      <wsdl:input message="tns:PostTweetSoapIn" />
+      <wsdl:output message="tns:PostTweetSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TweetServiceSoap" type="tns:TweetServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTweetsBetweenDates">
+      <soap:operation soapAction="http://tempuri.org/GetTweetsBetweenDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTweetsPaged">
+      <soap:operation soapAction="http://tempuri.org/GetTweetsPaged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLast100Tweets">
+      <soap:operation soapAction="http://tempuri.org/GetLast100Tweets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostTweet">
+      <soap:operation soapAction="http://tempuri.org/PostTweet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TweetServiceSoap12" type="tns:TweetServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTweetsBetweenDates">
+      <soap12:operation soapAction="http://tempuri.org/GetTweetsBetweenDates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTweetsPaged">
+      <soap12:operation soapAction="http://tempuri.org/GetTweetsPaged" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLast100Tweets">
+      <soap12:operation soapAction="http://tempuri.org/GetLast100Tweets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostTweet">
+      <soap12:operation soapAction="http://tempuri.org/PostTweet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TweetService">
+    <wsdl:port name="TweetServiceSoap" binding="tns:TweetServiceSoap">
+      <soap:address location="http://antoszj.cloudapp.net/lab7webservice/tweetservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TweetServiceSoap12" binding="tns:TweetServiceSoap12">
+      <soap12:address location="http://antoszj.cloudapp.net/lab7webservice/tweetservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

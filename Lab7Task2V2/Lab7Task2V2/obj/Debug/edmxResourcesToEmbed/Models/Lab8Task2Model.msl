@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Lab8Task2ModelStoreContainer" CdmEntityContainer="Lab8Task2Entities">
+    <EntitySetMapping Name="FileInfoes">
+      <EntityTypeMapping TypeName="Lab8Task2Model.FileInfo">
+        <MappingFragment StoreEntitySet="FileInfo">
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="BlogFileName" ColumnName="BlogFileName" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

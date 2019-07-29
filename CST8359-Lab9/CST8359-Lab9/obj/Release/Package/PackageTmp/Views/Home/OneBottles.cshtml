@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "OneBottles";
+}
+
+<h2>OneBottles</h2>
+
+<hr />
+
+@for (int i = 99; i > 0; i--)
+{
+    if (i > 2)
+    {
+        <p>@i bottles of beer on the wall @i bottles of beer, take 1 down pass it around @(i-1) bottles of beer on the wall.</p>
+    }
+    else if (i > 1)
+    {
+        <p>@i bottles of beer on the wall @i bottles of beer, take 1 down pass it around @(i - 1) bottle of beer on the wall.</p>
+    }
+    else
+    {
+        <p>@i bottle of beer on the wall @i bottle of beer, take 1 down pass it around @(i - 1) bottles of beer on the wall.</p>
+    }
+}
+
+<p>YOU'RE OUT OF BEER!</p>

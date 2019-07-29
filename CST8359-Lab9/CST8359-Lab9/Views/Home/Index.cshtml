@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Thac0006 - Lab 9 MVC</h1>
+    <p class="lead">Check out one of the links below:</p>
+</div>
+
+<p>Hello World!</p>
+<p>Stephen (Andy) Thacker</p>
+<p>040 768 337</p>
+<p>Answer to the following questions:</p>
+<hr />
+<h3>List 3 differences between ASP.NET Web Forms and ASP.NET MVC</h3>
+<ol>
+    <li>ASP.NET Web Forms use Page controller pattern approach for rendering layout. In this approach, every page has its own controller, i.e., code-behind file that processes the request. ASP.NET MVC uses Front Controller approach. That approach means a common controller for all pages processes the requests. </li>
+    <li>Web Forms: No separation of concerns. As we discussed that every page (.aspx) has its own controller (code behind i.e. aspx.cs/.vb file), so both are tightly coupled. MVC: Very clean separation of concerns. View and Controller are neatly separate. </li>
+    <li>Web Fomrs: It’s good for small scale applications with limited team size. MVC: It’s better as well as recommended approach for large-scale applications where different teams are working together. </li>
+</ol>
+<p>http://www.codeproject.com/Articles/668182/Difference-betweeen-ASP-NET-WebForms-and-ASP-NET-M</p>
+
+<h3>Describe ‘ASP.NET Web Pages’</h3>
+
+<p>ASP.NET Web Forms is a part of the ASP.NET web application framework and is included with Visual Studio. It is one of the four programming models you can use to create ASP.NET web applications, the others are ASP.NET MVC, ASP.NET Web Pages, and ASP.NET Single Page Applications.
+Web Forms are pages that your users request using their browser. These pages can be written using a combination of HTML, client-script, server controls, and server code. When users request a page, it is compiled and executed on the server by the framework, and then the framework generates the HTML markup that the browser can render. An ASP.NET Web Forms page presents information to the user in any browser or client device.
+</p>
+<p>http://www.asp.net/web-forms/what-is-web-forms</p>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <h3>Bottles of beer</h3>
+        <hr />
+        @Html.ActionLink("99 Bottles of beer x1", "OneBottles", "Home")
+        <br />
+        @Html.ActionLink("99 Bottles of beer x5", "FiveBottles", "Home")
+        <br />
+        @Html.ActionLink("99 Bottles of beer x7", "SevenBottles", "Home")
+
+    </div>
+    <div class="col-md-6">
+        <h3>MVC Forms</h3>
+        <hr />
+        @Html.ActionLink("Add", "Create", "People")
+        <br />
+        @Html.ActionLink("View", "Index", "People")
+    </div>
+</div>

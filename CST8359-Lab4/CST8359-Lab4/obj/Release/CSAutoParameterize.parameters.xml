@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Lab4Entities-Web.config Connection String" description="Lab4Entities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Model.Lab4.csdl|res://*/Model.Lab4.ssdl|res://*/Model.Lab4.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=cst8359-thacker.database.windows.net;initial catalog=Lab4;user id=CST8359;password=Woodpecker99;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\hp\\Documents\\Visual\ Studio\ 2013\\Projects\\CST8359-Lab4\\CST8359-Lab4\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Lab4Entities']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="CST8359_Lab3.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1>Stephen (Andy) Thacker</h1>
+            <h2>thac0006@algonquinlive.com</h2>
+            <h2>040 768 337</h2>
+            <asp:HyperLink ID="HyperLink3" runat="server" Text="Default" NavigateUrl="~/Default.aspx"></asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" Text="Calculator" NavigateUrl="~/Calculator.aspx"></asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" Text="Create Account" NavigateUrl="~/CreateAccount.aspx"></asp:HyperLink>
+            <hr />
+            <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
